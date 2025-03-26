@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="#" onclick="openLink('facebook')">Facebook</a>
+        <a href="#" onclick="openLink('instagram')">Instagram</a>
+    </nav>
+    
+    <div class="container">
+        <h1>About Us</h1>
+        <p id="bio">This is an interactive About Us page.</p>
+        <button onclick="changeBio()">Reveal More</button>
+    </div>
+    
+    <script>
+        function openLink(platform) {
+            if (platform === 'facebook') {
+                window.open('https://www.facebook.com/yourprofile', '_blank');
+            } else if (platform === 'instagram') {
+                window.open('https://www.instagram.com/yourprofile', '_blank');
+            }
+        }
+
+        function changeBio() {
+            document.getElementById("bio").innerText = "I am passionate about coding and creating interactive websites!";
+        }
+    </script>
+</body>
+</html>
